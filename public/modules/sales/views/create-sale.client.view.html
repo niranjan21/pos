@@ -1,0 +1,116 @@
+<section data-ng-controller="SalesController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Sales</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/sales">Sale</a>
+          </li>
+          <li class="active">
+            <strong>New Sales</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="cashOrCreditSales">Cash Or Credit Sales</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="cashOrCreditSales" id="cashOrCreditSales" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyName">Party Name</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="partyName" id="partyName" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="salesBillNumber">Sales Bill Number</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="salesBillNumber" id="salesBillNumber" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="saleDateAndTime">Sale Date And Time</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="saleDateAndTime" id="saleDateAndTime" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="totalAmount">Total Amount</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="totalAmount" id="totalAmount" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="totalDiscount">Total Discount</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="totalDiscount" id="totalDiscount" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="taxes">Taxes</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="taxes" id="taxes" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="paymentMethod">Payment Method</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymentMethod" id="paymentMethod" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="cardTransactionId">Card Transaction Id</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="cardTransactionId" id="cardTransactionId" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="cardTransactionTimeStamp">Card Transaction Time Stamp</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="cardTransactionTimeStamp" id="cardTransactionTimeStamp" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="cardTransactionBankAuthorizationId">Card Transaction Bank Authorization Id</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="cardTransactionBankAuthorizationId" id="cardTransactionBankAuthorizationId" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

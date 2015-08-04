@@ -1,0 +1,54 @@
+<section data-ng-controller="PurchasesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Purchase</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/purchases">Purchase</a>
+          </li>
+          <li class="active">
+            <strong>View Purchase</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == purchase.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/purchases/{{purchase._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Purchase Bill Number </dt><dd>{{ purchase.purchaseBillNumber }}</dd>
+              
+            
+              
+                 <dt>Purchase Bill Date </dt><dd>{{ purchase.purchaseBillDate | date }}</dd>
+              
+            
+                
+                 <dt>Party Name </dt><dd>{{ purchase.partyName }}</dd>
+              
+            
+                
+                 <dt>Paid Or Un Paid </dt><dd>{{ purchase.paidOrUnPaid }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

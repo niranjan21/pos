@@ -1,0 +1,82 @@
+<section data-ng-controller="SalesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Sales</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/sales">Sale</a>
+          </li>
+          <li class="active">
+            <strong>View Sales</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == sale.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/sales/{{sale._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Cash Or Credit Sales </dt><dd>{{ sale.cashOrCreditSales }}</dd>
+              
+            
+                
+                 <dt>Party Name </dt><dd>{{ sale.partyName }}</dd>
+              
+            
+                
+                 <dt>Sales Bill Number </dt><dd>{{ sale.salesBillNumber }}</dd>
+              
+            
+              
+                 <dt>Sale Date And Time </dt><dd>{{ sale.saleDateAndTime | date }}</dd>
+              
+            
+                
+                 <dt>Total Amount </dt><dd>{{ sale.totalAmount }}</dd>
+              
+            
+                
+                 <dt>Total Discount </dt><dd>{{ sale.totalDiscount }}</dd>
+              
+            
+                
+                 <dt>Taxes </dt><dd>{{ sale.taxes }}</dd>
+              
+            
+                
+                 <dt>Payment Method </dt><dd>{{ sale.paymentMethod }}</dd>
+              
+            
+                
+                 <dt>Card Transaction Id </dt><dd>{{ sale.cardTransactionId }}</dd>
+              
+            
+              
+                 <dt>Card Transaction Time Stamp </dt><dd>{{ sale.cardTransactionTimeStamp | date }}</dd>
+              
+            
+                
+                 <dt>Card Transaction Bank Authorization Id </dt><dd>{{ sale.cardTransactionBankAuthorizationId }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

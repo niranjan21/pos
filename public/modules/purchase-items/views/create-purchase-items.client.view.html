@@ -1,0 +1,74 @@
+<section data-ng-controller="PurchaseItemsController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Purchase Item</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/purchase-items">PurchaseItems</a>
+          </li>
+          <li class="active">
+            <strong>New Purchase Item</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="productName">Product Name</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productName" id="productName" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lotorbatchnumber">Lot / Batch Number</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="lotOrBatchNumber" id="lotorbatchnumber" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="expiryDate">Expiry Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="expiryDate" id="expiryDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="quantity">Quantity</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="quantity" id="quantity" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="purchasePrice">Purchase Price</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="purchasePrice" id="purchasePrice" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
