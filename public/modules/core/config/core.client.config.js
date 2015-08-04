@@ -5,44 +5,16 @@ angular.module('core').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
     
-      Menus.addMenuItem('topbar', 'Categories', 'category', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'category', 'Product Category', 'product-categories');
-      
-    
-      Menus.addMenuItem('topbar', 'Product', 'product', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'product', 'Product', 'products');
-      
-    
-      Menus.addMenuItem('topbar', 'Supplier', 'supplier', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'supplier', 'Supplier', 'suppliers');
-      
-    
-      Menus.addMenuItem('topbar', 'Customer', 'customer', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'customer', 'Customer', 'customers');
-      
-    
-      Menus.addMenuItem('topbar', 'Purchase', 'purchase', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'purchase', 'Purchase', 'purchases');
-      
-      Menus.addSubMenuItem('topbar', 'purchase', 'Purchase Items', 'purchase-items');
-      
-    
-      Menus.addMenuItem('topbar', 'Inventory', 'inventory', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'inventory', 'Inventory', 'inventories');
-      
-    
-      Menus.addMenuItem('topbar', 'Sale', 'sale', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'sale', 'Sale', 'sales');
-      
-      Menus.addSubMenuItem('topbar', 'sale', 'Sales Items', 'sales-items');
-      
+      Menus.addMenuItem('topbar', 'List Of Values', 'lov', 'dropdown');
+      Menus.addSubMenuItem('topbar', 'lov', 'Product Category', 'product-categories');
+      Menus.addSubMenuItem('topbar', 'lov', 'Product', 'products');
+      Menus.addSubMenuItem('topbar', 'lov', 'Supplier', 'suppliers');
+      Menus.addSubMenuItem('topbar', 'lov', 'Customer', 'customers');
+      Menus.addSubMenuItem('topbar', 'lov', 'Purchase', 'purchases');
+      Menus.addSubMenuItem('topbar', 'lov', 'Inventory', 'inventories');
+      Menus.addMenuItem('topbar', 'Transactions', 'tran', 'dropdown');
+      Menus.addSubMenuItem('topbar', 'tran', 'Purchase', 'purchases');
+      Menus.addSubMenuItem('topbar', 'tran', 'Sale', 'sales');
     
 	}
 ]);
