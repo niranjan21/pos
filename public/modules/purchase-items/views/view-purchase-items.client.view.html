@@ -1,0 +1,58 @@
+<section data-ng-controller="PurchaseItemsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Purchase Item</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/purchase-items">PurchaseItems</a>
+          </li>
+          <li class="active">
+            <strong>View Purchase Item</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == purchaseitems.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/purchase-items/{{purchaseitems._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Product Name </dt><dd>{{ purchaseitems.productName }}</dd>
+              
+            
+                
+                 <dt>Lot / Batch Number </dt><dd>{{ purchaseitems.lotOrBatchNumber }}</dd>
+              
+            
+              
+                 <dt>Expiry Date </dt><dd>{{ purchaseitems.expiryDate | date }}</dd>
+              
+            
+                
+                 <dt>Quantity </dt><dd>{{ purchaseitems.quantity }}</dd>
+              
+            
+                
+                 <dt>Purchase Price </dt><dd>{{ purchaseitems.purchasePrice }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

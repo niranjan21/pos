@@ -20,5 +20,29 @@ angular.module('core').run(['Menus',
       Menus.addSubMenuItem('topbar', 'supplier', 'Supplier', 'suppliers');
       
     
+      Menus.addMenuItem('topbar', 'Customer', 'customer', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'customer', 'Customer', 'customers');
+      
+    
+      Menus.addMenuItem('topbar', 'Purchase', 'purchase', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'purchase', 'Purchase', 'purchases');
+      
+      Menus.addSubMenuItem('topbar', 'purchase', 'Purchase Items', 'purchase-items');
+      
+    
+      Menus.addMenuItem('topbar', 'Inventory', 'inventory', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'inventory', 'Inventory', 'inventories');
+      
+    
+      Menus.addMenuItem('topbar', 'Sale', 'sale', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'sale', 'Sale', 'sales');
+      
+      Menus.addSubMenuItem('topbar', 'sale', 'Sales Items', 'sales-items');
+      
+    
 	}
 ]);

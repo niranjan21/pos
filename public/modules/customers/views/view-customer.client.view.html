@@ -1,0 +1,62 @@
+<section data-ng-controller="CustomersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Customer</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/customers">Customer</a>
+          </li>
+          <li class="active">
+            <strong>View Customer</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == customer.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/customers/{{customer._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Name </dt><dd>{{ customer.name }}</dd>
+              
+            
+                
+                 <dt>Mobile Number </dt><dd>{{ customer.mobileNumber }}</dd>
+              
+            
+                
+                 <dt>Address </dt><dd>{{ customer.address }}</dd>
+              
+            
+                
+                 <dt>Email </dt><dd>{{ customer.email }}</dd>
+              
+            
+                
+                 <dt>PAN </dt><dd>{{ customer.pan }}</dd>
+              
+            
+                
+                 <dt>TIN </dt><dd>{{ customer.tin }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>
